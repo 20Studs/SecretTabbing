@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SecretTabber</title>
+  <style>
+    body {
+      background-color: #283335;
+      margin: 0;
+      padding: 20px;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    button {
+      background-color: #191a1d;
+      color: white;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      display: block;
+      width: 100%;
+    }
+
+    #warningButton {
+      order: 0;
+      background-color: red;
+      color: white;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    #secretTabberText {
+      order: 1;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    #githubButton, #rateButton {
+      order: 2;
+      font-size: 14px;
+    }
+
+    #githubButton {
+      margin-right: 5px;
+    }
+
+    #secretTabberMode {
+      order: 3;
+      font-size: 18px;
+    }
+
+    #settingsButton {
+      order: 4;
+      align-self: flex-end;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    #settingsContainer {
+      display: none;
+    }
+
+    #noticeContainer {
+      background-color: #191a1d;
+      padding: 10px;
+      margin: 20px 0;
+      color: white;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button id="warningButton">!</button>
+  <div id="secretTabberText">SECRET Tabber</div>
+  <div>
+    <button id="githubButton">GitHub</button>
+    <button id="rateButton">Rate</button>
+  </div>
+  <button id="secretTabberMode">SecretTabber Mode</button>
+  <button id="settingsButton">Settings</button>
+  <div id="settingsContainer">
+    <input type="text" id="websiteInput" placeholder="Enter website URL">
+    <button id="addWebsite">+</button>
+  </div>
+  <div id="noticeContainer">
+    <p>NOTICE: Saved data may be lost when using this extension. Examples include documents, gaming, etc. Please make sure to back up your data by bookmarking or waiting until the app or program indicates that data has saved.</p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
